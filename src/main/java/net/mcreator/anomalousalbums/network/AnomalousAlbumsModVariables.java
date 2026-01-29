@@ -88,6 +88,10 @@ public class AnomalousAlbumsModVariables {
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.Is_Exposed_to_Deafening_silence = original.Is_Exposed_to_Deafening_silence;
 			if (!event.isWasDeath()) {
+				clone.Exposure_Time = original.Exposure_Time;
+				clone.Stage_1_Initiated = original.Stage_1_Initiated;
+				clone.Stage_2_Initiated = original.Stage_2_Initiated;
+				clone.Stage_3_Initiated = original.Stage_3_Initiated;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -265,6 +269,10 @@ public class AnomalousAlbumsModVariables {
 
 	public static class PlayerVariables {
 		public boolean Is_Exposed_to_Deafening_silence = false;
+		public double Exposure_Time = 0;
+		public boolean Stage_1_Initiated = false;
+		public boolean Stage_2_Initiated = false;
+		public boolean Stage_3_Initiated = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -274,6 +282,10 @@ public class AnomalousAlbumsModVariables {
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putBoolean("Is_Exposed_to_Deafening_silence", Is_Exposed_to_Deafening_silence);
+			nbt.putDouble("Exposure_Time", Exposure_Time);
+			nbt.putBoolean("Stage_1_Initiated", Stage_1_Initiated);
+			nbt.putBoolean("Stage_2_Initiated", Stage_2_Initiated);
+			nbt.putBoolean("Stage_3_Initiated", Stage_3_Initiated);
 			return nbt;
 		}
 
@@ -286,6 +298,10 @@ public class AnomalousAlbumsModVariables {
 				nbt = (CompoundTag) writeNBT();
 			}
 			Is_Exposed_to_Deafening_silence = nbt.getBoolean("Is_Exposed_to_Deafening_silence");
+			Exposure_Time = nbt.getDouble("Exposure_Time");
+			Stage_1_Initiated = nbt.getBoolean("Stage_1_Initiated");
+			Stage_2_Initiated = nbt.getBoolean("Stage_2_Initiated");
+			Stage_3_Initiated = nbt.getBoolean("Stage_3_Initiated");
 		}
 	}
 
@@ -320,6 +336,10 @@ public class AnomalousAlbumsModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.level().getEntity(message.target).getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.Is_Exposed_to_Deafening_silence = message.data.Is_Exposed_to_Deafening_silence;
+					variables.Exposure_Time = message.data.Exposure_Time;
+					variables.Stage_1_Initiated = message.data.Stage_1_Initiated;
+					variables.Stage_2_Initiated = message.data.Stage_2_Initiated;
+					variables.Stage_3_Initiated = message.data.Stage_3_Initiated;
 				}
 			});
 			context.setPacketHandled(true);
