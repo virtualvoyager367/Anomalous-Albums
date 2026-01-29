@@ -40,7 +40,11 @@ public class SpeakerispoweredProcedure {
 				if (_bs.getBlock().getStateDefinition().getProperty("Is_Playing_92") instanceof BooleanProperty _booleanProp)
 					world.setBlock(_pos, _bs.setValue(_booleanProp, true), 3);
 			}
-			if ((((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
+			if (!(((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
+				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+				}
+			}.compareDistOf(x, y, z)).findFirst().orElse(null)) == null) && (((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
 				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 				}
@@ -77,7 +81,11 @@ public class SpeakerispoweredProcedure {
 					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 				}
 			}.compareDistOf(x, y, z)).findFirst().orElse(null)).getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnomalousAlbumsModVariables.PlayerVariables())).Exposure_Time >= 900
-					&& (((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
+					&& !(((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
+						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+							return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+						}
+					}.compareDistOf(x, y, z)).findFirst().orElse(null)) == null) && (((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
 						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 							return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 						}
@@ -110,7 +118,11 @@ public class SpeakerispoweredProcedure {
 				}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 300, 2, false, false));
 			}
-			if ((((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
+			if (!(((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
+				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+				}
+			}.compareDistOf(x, y, z)).findFirst().orElse(null)) == null) && (((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
 				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 				}
@@ -142,7 +154,11 @@ public class SpeakerispoweredProcedure {
 				}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 2147483647, 3, false, false));
 			}
-			if (Math.random() == 0 && Math.random() == 0 && Math.random() == 0 && Math.random() == 0 && Math.random() == 0 && Math.random() == 0
+			if (!(((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
+				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+				}
+			}.compareDistOf(x, y, z)).findFirst().orElse(null)) == null) && Math.random() == 0 && Math.random() == 0 && Math.random() == 0 && Math.random() == 0 && Math.random() == 0 && Math.random() == 0
 					&& (((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
 						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 							return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
@@ -155,7 +171,11 @@ public class SpeakerispoweredProcedure {
 				}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 200, 2, false, false));
 			}
-			if (!((((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
+			if (!(((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
+				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+				}
+			}.compareDistOf(x, y, z)).findFirst().orElse(null)) == null) && !((((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
 				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 				}
@@ -165,7 +185,7 @@ public class SpeakerispoweredProcedure {
 						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 							return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 						}
-					}.compareDistOf(x, y, z)).findFirst().orElse(null)).getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnomalousAlbumsModVariables.PlayerVariables())).Exposure_Time + 5;
+					}.compareDistOf(x, y, z)).findFirst().orElse(null)).getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnomalousAlbumsModVariables.PlayerVariables())).Exposure_Time + 2;
 					((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
 						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 							return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
