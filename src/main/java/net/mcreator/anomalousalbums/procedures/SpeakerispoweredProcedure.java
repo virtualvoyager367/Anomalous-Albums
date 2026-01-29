@@ -31,7 +31,7 @@ public class SpeakerispoweredProcedure {
 				}
 			}
 		} else if ((world instanceof Level _lvl_getIndPow ? _lvl_getIndPow.getBestNeighborSignal(BlockPos.containing(x, y, z)) : 0) >= 1
-				&& (blockstate.getBlock().getStateDefinition().getProperty("Is_Playing_92") instanceof BooleanProperty _getbp10 && blockstate.getValue(_getbp10)) == false) {
+				&& !(blockstate.getBlock().getStateDefinition().getProperty("Is_Playing_92") instanceof BooleanProperty _getbp10 && blockstate.getValue(_getbp10)) == true) {
 			{
 				BlockPos _pos = BlockPos.containing(x, y, z);
 				BlockState _bs = world.getBlockState(_pos);
