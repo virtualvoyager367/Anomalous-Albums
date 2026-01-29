@@ -69,6 +69,10 @@
         ],
         "dependencies": [
           {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -94,6 +98,12 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "Is_Playing_92",
+      "type": "blockstate",
+      "scope": "world",
+      "value": "Blocks.AIR.defaultBlockState()"
     }
   ],
   "sound_elements": [
