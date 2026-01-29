@@ -21,6 +21,7 @@ import net.mcreator.anomalousalbums.init.AnomalousAlbumsModTabs;
 import net.mcreator.anomalousalbums.init.AnomalousAlbumsModSounds;
 import net.mcreator.anomalousalbums.init.AnomalousAlbumsModItems;
 import net.mcreator.anomalousalbums.init.AnomalousAlbumsModBlocks;
+import net.mcreator.anomalousalbums.init.AnomalousAlbumsModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -43,7 +44,7 @@ public class AnomalousAlbumsMod {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		AnomalousAlbumsModSounds.REGISTRY.register(bus);
 		AnomalousAlbumsModBlocks.REGISTRY.register(bus);
-
+		AnomalousAlbumsModBlockEntities.REGISTRY.register(bus);
 		AnomalousAlbumsModItems.REGISTRY.register(bus);
 
 		AnomalousAlbumsModTabs.REGISTRY.register(bus);

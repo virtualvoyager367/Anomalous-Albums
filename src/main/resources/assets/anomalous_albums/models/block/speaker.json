@@ -1,9 +1,0 @@
-{
-  "parent": "anomalous_albums:custom/speaker",
-  "textures": {
-    "all": "anomalous_albums:block/texture",
-    "particle": "anomalous_albums:block/texture",
-    "0": "anomalous_albums:block/texture"
-  },
-  "render_type": "cutout"
-}

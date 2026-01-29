@@ -1,0 +1,7 @@
+
+{
+  "parent": "anomalous_albums:displaysettings/speaker_-_converted",
+  "textures": {
+    "particle": "anomalous_albums:block/texture"
+  }
+}

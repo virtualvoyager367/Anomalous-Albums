@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "anomalous_albums:block/speaker"
+      "model": "anomalous_albums:custom/speaker_particle"
     }
   }
 }

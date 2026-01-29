@@ -21,6 +21,12 @@ authors="Zemabri"
     side="BOTH"
 
 
+[[dependencies.anomalous_albums]]
+    modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 
 # Start of user code block dependencies configuration

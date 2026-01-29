@@ -1,6 +1,6 @@
 {
   "_fv": 73,
-  "_type": "block",
+  "_type": "animatedblock",
   "definition": {
     "texture": "texture",
     "textureTop": "",
@@ -8,19 +8,19 @@
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 2,
-    "customModelName": "speaker:default",
+    "renderType": 0,
     "rotationMode": 0,
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "texture",
+    "animateBlockItem": false,
+    "itemTexture": "",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "CUTOUT",
+    "transparencyType": "SOLID",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -78,13 +78,12 @@
         "subtract": false
       }
     ],
-    "customProperties": [],
     "name": "Speaker",
     "specialInformation": {
       "fixedValue": []
     },
-    "hardness": 1.0,
-    "resistance": 10.0,
+    "hardness": 120.0,
+    "resistance": 100.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTabs": [
@@ -92,7 +91,7 @@
         "value": "CUSTOM:AnomalousAlbumsTab"
       }
     ],
-    "destroyTool": "pickaxe",
+    "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
     },
@@ -101,7 +100,7 @@
     "requiresCorrectTool": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
-    "canRedstoneConnect": true,
+    "canRedstoneConnect": false,
     "lightOpacity": 0,
     "material": {
       "value": "NONE"
@@ -118,13 +117,14 @@
       "value": ""
     },
     "offsetType": "NONE",
-    "aiPathNodeType": "FENCE",
+    "aiPathNodeType": "DEFAULT",
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
     "slipperiness": 0.6,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
+    "animationCount": 1.0,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "isCustomSoundType": false,
@@ -148,14 +148,15 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "vanillaToolTier": "IRON",
-    "isBonemealable": false,
+    "breakHarvestLevel": 0,
     "hasInventory": false,
+    "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
+    "generateFeature": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
@@ -169,7 +170,6 @@
     "onTickUpdate": {
       "name": "Speakerispowered"
     },
-    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
@@ -180,6 +180,10 @@
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 64
+    "maxGenerateHeight": 64,
+    "normal": "speaker_-_converted.geo.json",
+    "displaySettings": "speaker_-_converted.json",
+    "vanillaToolTier": "NONE",
+    "blockstateList": []
   }
 }

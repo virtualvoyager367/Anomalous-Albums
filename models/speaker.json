@@ -4,8 +4,8 @@
 	"parent": "Speaker",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "block/texture",
-		"particle": "block/texture"
+		"0": "texture",
+		"particle": "texture"
 	},
 	"elements": [
 		{

@@ -42,22 +42,6 @@
       }
     },
     {
-      "name": "Speaker",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "speaker",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/anomalous_albums/models/block/speaker.json",
-          "src/main/resources/assets/anomalous_albums/models/item/speaker.json",
-          "src/main/resources/assets/anomalous_albums/blockstates/speaker.json",
-          "src/main/resources/data/anomalous_albums/loot_tables/blocks/speaker.json",
-          "src/main/java/net/mcreator/anomalousalbums/block/SpeakerBlock.java"
-        ]
-      }
-    },
-    {
       "name": "Speakerispowered",
       "type": "procedure",
       "compiles": true,
@@ -68,10 +52,6 @@
           "src/main/java/net/mcreator/anomalousalbums/procedures/SpeakerispoweredProcedure.java"
         ],
         "dependencies": [
-          {
-            "name": "blockstate",
-            "type": "blockstate"
-          },
           {
             "name": "x",
             "type": "number"
@@ -88,6 +68,42 @@
             "name": "world",
             "type": "world"
           }
+        ]
+      }
+    },
+    {
+      "name": "Speaker",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speaker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomalousalbums/block/display/SpeakerDisplayItem.java",
+          "src/main/java/net/mcreator/anomalousalbums/block/renderer/SpeakerTileRenderer.java",
+          "src/main/java/net/mcreator/anomalousalbums/block/entity/SpeakerTileEntity.java",
+          "src/main/resources/assets/anomalous_albums/models/custom/speaker_particle.json",
+          "src/main/resources/assets/anomalous_albums/models/item/speaker.json",
+          "src/main/resources/assets/anomalous_albums/blockstates/speaker.json",
+          "src/main/java/net/mcreator/anomalousalbums/block/model/SpeakerDisplayModel.java",
+          "src/main/java/net/mcreator/anomalousalbums/block/SpeakerBlock.java",
+          "src/main/java/net/mcreator/anomalousalbums/block/model/SpeakerBlockModel.java",
+          "src/main/java/net/mcreator/anomalousalbums/block/renderer/SpeakerDisplayItemRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "Headphones",
+      "type": "animatedarmor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "headphones",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomalous_albums/models/item/headphones_helmet.json",
+          "src/main/java/net/mcreator/anomalousalbums/item/model/HeadphonesModel.java",
+          "src/main/java/net/mcreator/anomalousalbums/item/HeadphonesItem.java",
+          "src/main/java/net/mcreator/anomalousalbums/client/renderer/HeadphonesArmorRenderer.java"
         ]
       }
     }
@@ -116,15 +132,15 @@
       "subtitle": "Record 92 Playing"
     }
   ],
-  "tag_elements": {
-    "BLOCKS:minecraft:mineable/pickaxe": [
-      "~CUSTOM:Speaker"
-    ]
-  },
+  "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "item.anomalous_albums.headphones_leggings": "Headphones Leggings",
       "subtitles.record_92": "Record 92 Playing",
+      "item.anomalous_albums.headphones_boots": "Headphones Boots",
+      "item.anomalous_albums.headphones_chestplate": "Headphones Chestplate",
+      "item.anomalous_albums.headphones_helmet": "Headphones",
       "block.anomalous_albums.speaker": "Speaker",
       "item_group.anomalous_albums.anomalous_albums_tab": "Anomalous Albums"
     }
@@ -138,13 +154,17 @@
     "modName": "Anomalous Albums",
     "version": "1.0.0",
     "author": "Zemabri",
+    "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
     "serverSideOnly": false,
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "geckolib"
+    ],
     "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.anomalousalbums"
   },
   "mcreatorVersion": 202400452410
