@@ -1,0 +1,141 @@
+{
+  "mod_elements": [
+    {
+      "name": "DeafeningSilenceOverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deafening_silence_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomalousalbums/client/screens/DeafeningSilenceOverlayOverlay.java"
+        ]
+      }
+    },
+    {
+      "name": "AnomalousAlbumsTab",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anomalous_albums_tab",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "DSExposureCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ds_exposure_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/anomalousalbums/procedures/DSExposureCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Speaker",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speaker",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomalous_albums/models/block/speaker.json",
+          "src/main/resources/assets/anomalous_albums/models/item/speaker.json",
+          "src/main/resources/assets/anomalous_albums/blockstates/speaker.json",
+          "src/main/resources/data/anomalous_albums/loot_tables/blocks/speaker.json",
+          "src/main/java/net/mcreator/anomalousalbums/block/SpeakerBlock.java"
+        ]
+      }
+    },
+    {
+      "name": "Speakerispowered",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speakerispowered",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomalousalbums/procedures/SpeakerispoweredProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "Is_Exposed_to_Deafening_silence",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "record_92",
+      "files": [
+        "untitled_song"
+      ],
+      "category": "record",
+      "subtitle": "Abstract Properties Playing"
+    }
+  ],
+  "tag_elements": {
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:Speaker"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "subtitles.record_92": "Abstract Properties Playing",
+      "block.anomalous_albums.speaker": "Speaker",
+      "item_group.anomalous_albums.anomalous_albums_tab": "Anomalous Albums"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "anomalous_albums",
+    "modName": "Anomalous Albums",
+    "version": "1.0.0",
+    "author": "Zemabri",
+    "license": "All Rights Reserved",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "modElementsPackage": "net.mcreator.anomalousalbums"
+  },
+  "mcreatorVersion": 202400452410
+}
