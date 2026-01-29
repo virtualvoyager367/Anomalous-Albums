@@ -106,36 +106,6 @@
           "src/main/java/net/mcreator/anomalousalbums/client/renderer/HeadphonesArmorRenderer.java"
         ]
       }
-    },
-    {
-      "name": "Mutation",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mutation",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/anomalousalbums/procedures/MutationProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
     }
   ],
   "variable_elements": [
