@@ -32,13 +32,6 @@ public class SpeakerispoweredProcedure {
 				return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 			}
 		}.compareDistOf(x, y, z)).findFirst().orElse(null);
-		while (Current_Entity == null) {
-			Current_Entity = (Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
-				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-				}
-			}.compareDistOf(x, y, z)).findFirst().orElse(null);
-		}
 		if (!(Current_Entity == null)) {
 			if (((world instanceof Level _lvl_getIndPow ? _lvl_getIndPow.getBestNeighborSignal(BlockPos.containing(x, y, z)) : 0) >= 1) == true) {
 				if (world instanceof Level _level) {
