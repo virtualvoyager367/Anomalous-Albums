@@ -33,6 +33,7 @@ public class SpeakerispoweredProcedure {
 			}
 		}.compareDistOf(x, y, z)).findFirst().orElse(null);
 		if (!(NearestEntity == null)) {
+			Entity FinalNearestEntity = NearestEntity;
 			if (((world instanceof Level _lvl_getIndPow ? _lvl_getIndPow.getBestNeighborSignal(BlockPos.containing(x, y, z)) : 0) >= 1) == true) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
@@ -47,39 +48,39 @@ public class SpeakerispoweredProcedure {
 					if (_bs.getBlock().getStateDefinition().getProperty("Is_Playing_92") instanceof BooleanProperty _booleanProp)
 						world.setBlock(_pos, _bs.setValue(_booleanProp, true), 3);
 				}
-				if ((NearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnomalousAlbumsModVariables.PlayerVariables())).Exposure_Time >= 300
-						&& (NearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnomalousAlbumsModVariables.PlayerVariables())).Stage_1_Initiated == false) {
+				if ((FinalNearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnomalousAlbumsModVariables.PlayerVariables())).Exposure_Time >= 300
+						&& (FinalNearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnomalousAlbumsModVariables.PlayerVariables())).Stage_1_Initiated == false) {
 					{
 						boolean _setval = true;
-						NearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						FinalNearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.Stage_1_Initiated = _setval;
-							capability.syncPlayerVariables(NearestEntity);
+							capability.syncPlayerVariables(FinalNearestEntity);
 						});
 					}
-					if (NearestEntity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					if (FinalNearestEntity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 300, 2, false, false));
 				}
-				if ((NearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnomalousAlbumsModVariables.PlayerVariables())).Exposure_Time >= 900
-						&& (NearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnomalousAlbumsModVariables.PlayerVariables())).Stage_2_Initiated == false) {
+				if ((FinalNearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnomalousAlbumsModVariables.PlayerVariables())).Exposure_Time >= 900
+						&& (FinalNearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnomalousAlbumsModVariables.PlayerVariables())).Stage_2_Initiated == false) {
 					{
 						boolean _setval = true;
-						NearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						FinalNearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.Stage_2_Initiated = _setval;
-							capability.syncPlayerVariables(NearestEntity);
+							capability.syncPlayerVariables(FinalNearestEntity);
 						});
 					}
-					if (NearestEntity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					if (FinalNearestEntity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 300, 2, false, false));
-					if (NearestEntity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					if (FinalNearestEntity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 300, 2, false, false));
 				}
-				if ((NearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnomalousAlbumsModVariables.PlayerVariables())).Exposure_Time >= 1200
-						&& (NearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnomalousAlbumsModVariables.PlayerVariables())).Stage_3_Initiated == false) {
+				if ((FinalNearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnomalousAlbumsModVariables.PlayerVariables())).Exposure_Time >= 1200
+						&& (FinalNearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnomalousAlbumsModVariables.PlayerVariables())).Stage_3_Initiated == false) {
 					{
 						boolean _setval = true;
-						NearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						FinalNearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.Stage_3_Initiated = _setval;
-							capability.syncPlayerVariables(NearestEntity);
+							capability.syncPlayerVariables(FinalNearestEntity);
 						});
 					}
 					if (((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
@@ -102,12 +103,12 @@ public class SpeakerispoweredProcedure {
 					}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 200, 2, false, false));
 				}
-				if (!(NearestEntity == null) && !((NearestEntity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == AnomalousAlbumsModItems.HEADPHONES_HELMET.get())) {
+				if (!(FinalNearestEntity == null) && !((FinalNearestEntity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == AnomalousAlbumsModItems.HEADPHONES_HELMET.get())) {
 					{
-						double _setval = (NearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnomalousAlbumsModVariables.PlayerVariables())).Exposure_Time + 2;
-						NearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						double _setval = (FinalNearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnomalousAlbumsModVariables.PlayerVariables())).Exposure_Time + 2;
+						FinalNearestEntity.getCapability(AnomalousAlbumsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.Exposure_Time = _setval;
-							capability.syncPlayerVariables(NearestEntity);
+							capability.syncPlayerVariables(FinalNearestEntity);
 						});
 					}
 				}
