@@ -125,6 +125,7 @@ public class AnomalousAlbumsModVariables {
 	public static class WorldVariables extends SavedData {
 		public static final String DATA_NAME = "anomalous_albums_worldvars";
 		public BlockState Is_Playing_92 = Blocks.AIR.defaultBlockState();
+		public String Nearest_Player = "\"\"";
 
 		public static WorldVariables load(CompoundTag tag) {
 			WorldVariables data = new WorldVariables();
@@ -134,11 +135,13 @@ public class AnomalousAlbumsModVariables {
 
 		public void read(CompoundTag nbt) {
 			Is_Playing_92 = NbtUtils.readBlockState(BuiltInRegistries.BLOCK.asLookup(), nbt.getCompound("Is_Playing_92"));
+			Nearest_Player = nbt.getString("Nearest_Player");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.put("Is_Playing_92", NbtUtils.writeBlockState(Is_Playing_92));
+			nbt.putString("Nearest_Player", Nearest_Player);
 			return nbt;
 		}
 

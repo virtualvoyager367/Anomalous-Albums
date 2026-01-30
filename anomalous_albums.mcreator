@@ -44,7 +44,7 @@
     {
       "name": "Speakerispowered",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "speakerispowered",
       "metadata": {
@@ -144,6 +144,12 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "Nearest_Player",
+      "type": "string",
+      "scope": "world",
+      "value": "\"\""
     }
   ],
   "sound_elements": [
